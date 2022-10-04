@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <span class="up "><i class="fa-solid fa-arrow-up"></i></span>
+    <div class="row">
+        <div class="col-md-3 col-sm-12  p-5 hight">
+            <form>
+                <span>Add Product </span>
+                <div  class="mb-3">
+                    <input type="text" class="form-control mb-3 p-2" id="titel" placeholder="titel" required>
+                    <input onkeyup="getTotal()" type="text" class="form-control mb-3 p-2" id="price" placeholder="price" required>
+                    <input onkeyup="getTotal()" type="text" class="form-control mb-3 p-2" id="taxes" placeholder="taxes" required>
+                    <input onkeyup="getTotal()" type="text" class="form-control mb-3 p-2" id="ads" placeholder="ads" required>
+                    <input onkeyup="getTotal()" type="text" class="form-control mb-3 p-2" id="discount" placeholder="discount" required>
+                    <button id="total"  class="btn btn-primary mb-3 p-2">total: 0</button>
+                    <input type="text" class="form-control mb-3 p-2" id="count" placeholder="count" required>
+                    <input type="text" class="form-control mb-3 p-2" id="category" placeholder="category" required>
+                </div>
+                <!-- <span onclick="ff()" id="submit" class="btn btn-primary w-100 mt-5 mb-3 p-2">click</span> -->
+                <button type="submit" onclick="addProduct()" id="submit" class="btn btn-primary w-100 mt-4 mb-3 p-2">Create</button>
+               
+
+            </form>
+        </div>
+        <div class=" col-md-9 col-sm-12 p-0 overflow-hidden">
+            <div  class=" w-100 nav-b p-3 d-flex mr-5">
+                <i style="margin-right: 15px;" class="fa-brands fs-1 fa-product-hunt"></i>
+                <input onkeyup="searchData(this.value)" class="form-control me-2 " id="search" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <div  class=" w-100 welcome">Welcom to Management Product <br></div> 
+            <hr>
+            <div class="d-flex  flex-wrap" id="addBox">
+                <!-- product heare .....  -->
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html
